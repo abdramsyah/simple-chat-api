@@ -76,6 +76,7 @@ class MessageController {
         conversationId,
         sender: senderId,
         text,
+        isRead: false,
       }
 
       // mmebuat messages baru
