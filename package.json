@@ -1,0 +1,48 @@
+{
+  "name": "simple-chat-api",
+  "version": "1.0.0",
+  "description": "simple caht api",
+  "main": "app.js",
+  "scripts": {
+    "db:create": "npx sequelize-cli db:create",
+    "db:drop": "npx sequelize-cli db:drop",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "db:seed:undo": "npx sequelize-cli db:seed:undo:all",
+    "db:create:development": "SET NODE_ENV=development&npm run db:create",
+    "db:create:test": "SET NODE_ENV=test&npm run db:create",
+    "db:drop:development": "SET NODE_ENV=development&npm run db:drop",
+    "db:drop:test": "SET NODE_ENV=test&npm run db:drop",
+    "db:migrate:development": "SET NODE_ENV=development&npm run db:migrate",
+    "db:migrate:test": "SET NODE_ENV=test&npm run db:migrate",
+    "db:migrate:undo:all:test": "SET NODE_ENV=test&npm run db:migrate:undo:all",
+    "db:seed:development": "SET NODE_ENV=development&npm run db:seed",
+    "db:seed:test": "SET NODE_ENV=test&npm run db:seed",
+    "db:seed:undo:development": "SET NODE_ENV=development&npm run db:seed:undo",
+    "db:seed:undo:test": "SET NODE_ENV=test&npm run db:seed:undo",
+    "test": "SET NODE_ENV=test&npx jest --runInBand --detectOpenHandles --forceExit",
+    "dev": "SET NODE_ENV=development&npx nodemon bin/www.js",
+    "start": "nodemon bin/http.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdramsyah/simple-chat-api.git"
+  },
+  "author": "abdramsyah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdramsyah/simple-chat-api/issues"
+  },
+  "homepage": "https://github.com/abdramsyah/simple-chat-api#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "pg-promise": "^10.11.1",
+    "sequelize": "^6.21.3",
+    "sequelize-cli": "^6.4.1",
+    "uuid": "^8.3.2"
+  }
+}
